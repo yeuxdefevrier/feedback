@@ -22,15 +22,15 @@ app.get("/", (req, res) => {
   res.render("index");
 });
 
-app.get("/feedback", (req, res) => {
+app.get("feedback", (req, res) => {
   res.render("feedback");
 });
 
-app.post("/feedback", (req, res) => {
+app.post("feedback", (req, res) => {
   const name = req.body.name;
   const feedback = req.body.feedback;
   const email = req.body.email;
-  res.render("thank you", { name: name, email: email });
+  res.render("thx", { name: name, email: email });
 });
 
 app.listen(port, host, () => console.log(`${host}:${port} listen...`));
