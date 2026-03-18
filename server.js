@@ -10,8 +10,6 @@ const app = express();
 app.set("view engine", "ejs");
 app.set("views", path.join(__dirname, "templates"));
 
-app.use("/tyylit", express.static("includes/styles"));
-
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
