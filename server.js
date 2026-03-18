@@ -22,11 +22,11 @@ app.get("/", (req, res) => {
   res.render("index");
 });
 
-app.get("feedback", (req, res) => {
+app.get("/feedback", (req, res) => {
   res.render("feedback");
 });
 
-app.post("feedback", (req, res) => {
+app.post("/feedback", (req, res) => {
   const name = req.body.name;
   const feedback = req.body.feedback;
   const email = req.body.email;
